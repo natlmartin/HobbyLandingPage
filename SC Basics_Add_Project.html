@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing Bass Guitar 🎸</title>
+    <style>
+      body {
+        background: linear-gradient(to top, pink 0%, #ff6666 100%);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      h1 {
+        color: #ff6666;
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+        font-style: italic;
+        color: pink;
+        margin-bottom: 25px;
+      }
+
+      .bodycontainer {
+        max-width: 80%;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 20px;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: #ff6666 solid 3px;
+        background-color: pink;
+        font-size: 1rem;
+        border-radius: 10px;
+        padding: 5px;
+        color: #ff6666;
+        transition: 200ms ease-in-out;
+      }
+
+      button:hover {
+        background-color: pink;
+        color: black;
+      }
+
+      .dark-button {
+        background-color: black;
+        color: pink;
+        margin: 20px auto;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ff6666;
+      }
+
+      img {
+        width: 80%;
+      }
+
+      .my-bass {
+        border-radius: 10px;
+        transition: 200ms ease-in-out;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .my-bass:hover {
+        opacity: 0.7;
+        transform: scale(1.1);
+      }
+
+      .grid {
+        margin: 30px 10px 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        height: 100%;
+        transition: 200ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(1.1);
+      }
+
+      footer {
+        text-align: center;
+        font-style: italic;
+        color: #ff6666;
+      }
+
+      .dark {
+        color: white;
+        background: black;
+      }
+
+      .dark .bodycontainer {
+        background-color: #262626;
+      }
+
+      .dark a {
+        color: #ff6666;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark-button">Change Theme</button>
+    <div class="bodycontainer">
+      <h1>My Hobby</h1>
+      <h2>Playing Bass Guitar 🎸</h2>
+      <a href="https://en.wikipedia.org/wiki/Bass_guitar">
+        <img
+          alt="my bass"
+          class="my-bass"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/825/original/bass_1.jpeg?1674318458"
+        />
+      </a>
+      <div class="grid">
+        <img
+          alt="pink bass"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/012/original/pink_bass.jpeg?1674411990"
+        />
+        <img
+          alt="effects pedal"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/013/original/effects_pedals.jpeg?1674412191"
+        />
+        <img
+          alt="Kim Deal"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/829/original/kim_deal.jpeg?1674318505"
+        />
+        <img
+          alt="Kim Gordon"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/011/original/kim_gordon.jpeg?1674411811"
+        />
+      </div>
+      <p>
+        The bass guitar, electric bass or simply bass, is the lowest-pitched
+        member of the guitar family. It is a plucked string instrument similar
+        in appearance and construction to an electric or acoustic guitar, but
+        with a longer neck and scale length, and typically four to six strings
+        or courses. Since the mid-1950s, the bass guitar has largely replaced
+        the double bass in popular music. The four-string bass is usually tuned
+        the same as the double bass, which corresponds to pitches one octave
+        lower than the four lowest-pitched strings of a guitar (typically E, A,
+        D, and G). It is played primarily with the fingers or thumb, or with a
+        pick. To be heard at normal performance volumes, electric bass guitars
+        require external amplification.
+      </p>
+      <button>
+        <a href="https://en.wikipedia.org/wiki/Bass_guitar">
+          Learn more about bass guitar</a
+        >
+      </button>
+    </div>
+    <footer>
+      <p>Coded by Natalie Martin</p>
+    </footer>
+    <script>
+      function applyDarkTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+      //   if (body.classList.contains("dark")) {
+      //     body.classList.remove("dark");
+      //   } else {
+      //     body.classList.add("dark");
+      //   }
+      // }
+
+      let darkTheme = document.querySelector(".dark-button");
+      darkTheme.addEventListener("click", applyDarkTheme);
+    </script>
+  </body>
+</html>
